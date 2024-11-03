@@ -1,6 +1,11 @@
 {
   //to generics
 
+  interface User {
+    name: string;
+    age: number;
+  }
+
   type GenericsArray<param> = Array<param>;
 
   //   const rollNumber: number[] = [3, 4, 5, 343];
@@ -18,10 +23,23 @@
   //   const boolArray: boolean[] = [true, false];
   const boolArray: GenericsArray<boolean> = [true, false];
 
-  const watcher : = [
+  const watcher: GenericsArray<{ name: string; age: number }> = [
     {
-        name: 'yugi'
-    }
-  ]
+      name: "yuji",
+      age: 16,
+    },
+    {
+      name: "nobora",
+      age: 16,
+    },
+  ];
 
+  type GenericsTuple<X, Y> = [X, Y];
+
+  const manush: GenericsTuple<string, string> = ["mr. x", "mr. y"];
+
+  const UserWithId: GenericsTuple<number, { name: string; email: string }> = [
+    12,
+    { name: "sadik", email: "a@gmail.com" },
+  ];
 }
