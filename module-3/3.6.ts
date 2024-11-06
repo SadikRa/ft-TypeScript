@@ -13,13 +13,18 @@
           this.balance = balance;
         }
     
-       public addDeposit(amount: number) {
-          this.balance = this.balance + amount;
-        }
-        getBalance() {
-          return this.balance
-        }
-      }
+    //    public addDeposit(amount: number) {
+    //       this.balance = this.balance + amount;
+    //     }
+
+    get Balance(){
+        return this.balance;
+    }
+
+    //     getBalance() {
+    //       return this.balance
+    //     }
+    //   }
     
       class StudentAccount extends BankAccount{
         test(){
@@ -29,9 +34,10 @@
     
       const goribMaunsherAccount = new BankAccount(111, "mr.x", "5");
       //   goribMaunsherAccount.name = "sadik";
-      goribMaunsherAccount.addDeposit(0.5);
-      goribMaunsherAccount.getBalance();
+    //   goribMaunsherAccount.addDeposit(0.5);
+    //   goribMaunsherAccount.getBalance();
     
+    const myBalance = goribMaunsherAccount.B
 
     ///
 }
