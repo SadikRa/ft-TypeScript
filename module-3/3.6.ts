@@ -1,43 +1,42 @@
 {
+  //Getter and setter
 
-    //Getter and setter
+  class BankAccount {
+    readonly id: number;
+    public name: string;
+    protected balance: number;
 
-    class BankAccount {
-        readonly id: number;
-        public name: string;
-        protected balance: string;
-    
-        constructor(id: number, name: string, balance: string) {
-          this.id = id;
-          this.name = name;
-          this.balance = balance;
-        }
-    
-    //    public addDeposit(amount: number) {
-    //       this.balance = this.balance + amount;
-    //     }
-
-    get Balance(){
-        return this.balance;
+    constructor(id: number, name: string, balance: number) {
+      this.id = id;
+      this.name = name;
+      this.balance = balance;
     }
 
-    //     getBalance() {
-    //       return this.balance
-    //     }
-    //   }
-    
-      class StudentAccount extends BankAccount{
-        test(){
-            this.balance
-        }
-      }
-    
-      const goribMaunsherAccount = new BankAccount(111, "mr.x", "5");
-      //   goribMaunsherAccount.name = "sadik";
-    //   goribMaunsherAccount.addDeposit(0.5);
-    //   goribMaunsherAccount.getBalance();
-    
-    const myBalance = goribMaunsherAccount.B
+    // Setter for depositing money
+    set deposit(amount: number) {
+      this.balance += amount;
+    }
 
-    ///
+    // Getter to retrieve the balance
+    get Balance() {
+      return this.balance;
+    }
+
+    getBalance() {
+      return this.balance;
+    }
+  }
+
+  class StudentAccount extends BankAccount {
+    test() {
+      return this.balance;
+    }
+  }
+
+  const goribMaunsherAccount = new BankAccount(111, "mr.x", 5);
+  goribMaunsherAccount.deposit = 50; // Depositing 50
+
+  const myBalance = goribMaunsherAccount.Balance;
+  console.log("Balance after deposit:", myBalance);
+  ///
 }
